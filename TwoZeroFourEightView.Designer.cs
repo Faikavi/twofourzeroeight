@@ -48,6 +48,8 @@
             this.btnUp = new System.Windows.Forms.Button();
             this.btnRight = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
+            this.lbl34 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl00
@@ -260,49 +262,81 @@
             // 
             // btnLeft
             // 
-            this.btnLeft.Location = new System.Drawing.Point(85, 336);
+            this.btnLeft.Location = new System.Drawing.Point(12, 336);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(53, 45);
             this.btnLeft.TabIndex = 16;
             this.btnLeft.Text = "←";
             this.btnLeft.UseVisualStyleBackColor = true;
+            this.btnLeft.AutoSizeChanged += new System.EventHandler(this.btnLeft_Click);
             this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
+            this.btnLeft.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyboardControl);
             // 
             // btnUp
             // 
-            this.btnUp.Location = new System.Drawing.Point(140, 307);
+            this.btnUp.Location = new System.Drawing.Point(71, 303);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(53, 45);
             this.btnUp.TabIndex = 17;
             this.btnUp.Text = "↑";
             this.btnUp.UseVisualStyleBackColor = true;
+            this.btnUp.AutoSizeChanged += new System.EventHandler(this.btnUp_Click);
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
+            this.btnUp.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyboardControl);
             // 
             // btnRight
             // 
-            this.btnRight.Location = new System.Drawing.Point(195, 336);
+            this.btnRight.Location = new System.Drawing.Point(130, 336);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(53, 45);
             this.btnRight.TabIndex = 18;
             this.btnRight.Text = "→";
             this.btnRight.UseVisualStyleBackColor = true;
+            this.btnRight.AutoSizeChanged += new System.EventHandler(this.btnRight_Click);
             this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
+            this.btnRight.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyboardControl);
             // 
             // btnDown
             // 
-            this.btnDown.Location = new System.Drawing.Point(140, 371);
+            this.btnDown.Location = new System.Drawing.Point(71, 371);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(53, 45);
             this.btnDown.TabIndex = 19;
             this.btnDown.Text = "↓";
             this.btnDown.UseVisualStyleBackColor = true;
+            this.btnDown.AutoSizeChanged += new System.EventHandler(this.btnDown_Click);
             this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
+            this.btnDown.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.keyboardControl);
+            // 
+            // lbl34
+            // 
+            this.lbl34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl34.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbl34.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbl34.Location = new System.Drawing.Point(201, 336);
+            this.lbl34.Margin = new System.Windows.Forms.Padding(0);
+            this.lbl34.Name = "lbl34";
+            this.lbl34.Size = new System.Drawing.Size(114, 45);
+            this.lbl34.TabIndex = 20;
+            this.lbl34.Text = "0";
+            this.lbl34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(242, 319);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "score";
             // 
             // TwoZeroFourEightView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 428);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl34);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnRight);
             this.Controls.Add(this.btnUp);
@@ -326,6 +360,7 @@
             this.Name = "TwoZeroFourEightView";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -351,6 +386,7 @@
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Label lbl34;
+        private System.Windows.Forms.Label label1;
     }
 }
-
